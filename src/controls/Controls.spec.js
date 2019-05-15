@@ -15,7 +15,8 @@ import Controls from "./Controls";
 
     it("display 'unlocked' while gate is unlocked", () => {
         const component = render(<Controls closed={true} locked={false} />);
-
+            //originally used getByText was suggested
+            //by terminal msg to us getAllByText
          component.getAllByText("Lock Gate");
     });
     it("display 'locked'", () => {
